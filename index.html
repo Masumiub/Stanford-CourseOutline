@@ -56,7 +56,7 @@
         <div class="row">
             <div class="col-lg-3">
                 
-                <ul class="navLeft">
+                <ul class="navLeft" id="navLeft">
                     <li>  <a href="index.html"> <img src="./logo.png" alt="logo" width="65px;"> </a>
                     </li>
                     <li> <a href="#news" style="color:rgb(255, 200, 0)">News</a> </li>
@@ -66,7 +66,7 @@
                     <li> <a href="#responses" style="color:rgb(247, 75, 32)">AMA Responses</a>  </li>
                 </ul>
             </div>
-            <div class="col-lg-9 col-md-9 col-12">
+            <div class="col-lg-9 col-12">
                 <h1>CS106S</h1>
                 <h1 style="color: rgb(118, 118, 118)">
                     Coding for Social Good
@@ -313,6 +313,27 @@
     </div>
 
 
+    <script>
+        var body = document.getElementById('navLeft');
+        body.style.marginTop = '0%';
+    
+
+        window.onscroll = function (event) {
+            var scroll = window.pageYOffset;
+            if(scroll<= 299){
+                // move the navbar at its main position
+                body.style.marginTop = '0%';
+                body.style.transitionDuration = '1s';
+            }
+            if (scroll >= 300) {
+                // move the navbar at up
+                body.style.marginTop = '-10%';
+                body.style.transitionDuration = '1s';
+            }
+            
+
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
